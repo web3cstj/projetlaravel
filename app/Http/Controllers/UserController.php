@@ -14,8 +14,11 @@ class UserController extends Controller
      */
     public function index()
     {
-        $user = User::fake();
-        return view("users.index", ['user' => $user]);
+        $users = [];
+        for ($i = 0; $i < 10; $i += 1) {
+           $users[] = User::fake();
+        }
+        return view("users.index", ['users'=>$users]);
     }
 
     /**
