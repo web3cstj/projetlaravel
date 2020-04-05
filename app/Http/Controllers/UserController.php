@@ -14,9 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $user = new User();
-        $user->prenom = "Rita";
-        $user->nom = "Raté";
+        $user = User::fake();
         return $user;
     }
 
