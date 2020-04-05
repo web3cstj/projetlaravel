@@ -1,12 +1,18 @@
 @extends("techno.index")
 @section("contenu")
-    <h1>{{$user->prenom}} {{$user->nom}}</h1>
-    <div>{{$user->email}}</div>
-    <div>{{$user->tel}}</div>
-    <address>
-        <div>{{$user->adresse}}</div>
-        <div>{{$user->ville}} {{$user->province}}</div>
-        <div>{{$user->codepostal}}</div>
-    </address>
-    <p>{{$user->citation}}</p>
+    @component("techno.post");
+        @slot('titre')
+            {{$user->prenom}} <em>{{$user->nom}}</em>
+        @endslot
+        @slot('contenu')
+            <div>{{$user->email}}</div>
+            <div>{{$user->tel}}</div>
+            <address>
+                <div>{{$user->adresse}}</div>
+                <div>{{$user->ville}} {{$user->province}}</div>
+                <div>{{$user->codepostal}}</div>
+            </address>
+            <p>{{$user->citation}}</p>
+        @endslot
+    @endcomponent
 @endsection
