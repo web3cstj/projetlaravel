@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User as User;
 
 class UserController extends Controller
 {
@@ -13,7 +14,10 @@ class UserController extends Controller
      */
     public function index()
     {
-        return "Dans le controller";
+        $user = new User();
+        $user->prenom = "Rita";
+        $user->nom = "Raté";
+        return $user;
     }
 
     /**
