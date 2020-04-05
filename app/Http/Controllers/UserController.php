@@ -15,7 +15,7 @@ class UserController extends Controller
     public function index()
     {
         $user = User::fake();
-        return view("techno.index", ['user' => $user]);
+        return view("users.index", ['user' => $user]);
     }
 
     /**

@@ -56,7 +56,8 @@ ddsmoothmenu.init({
     <div id="templatemo_main">
 
 		<div id="content">
-        	<div class="post fpost">
+            @section('contenu')
+            <div class="post fpost">
             	<img src="images/blog/01.jpg" alt="Image 01" class="image_frame image_fl" />
                 <h2><a rel="nofollow" href="http://www.templatemo.com">Free Website Templates</a></h2>
                 <div class="meta">by <strong><a href="#">Edward </a></strong> on <strong>March 24, 2048</strong> in <strong><a href="#">Freebie</a>, <a href="#">Template</a></strong> | <strong><a href="#">124 comments</a></strong></div>
@@ -96,6 +97,7 @@ ddsmoothmenu.init({
                         <li><a href="#">Next</a></li>
                     </ul>
                 </div>
+            @show
             <div class="cleaner"></div>
         </div>
 
