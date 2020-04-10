@@ -18,4 +18,5 @@ Route::get('/welcome', function () {
 });
 Route::get('/installer', "AppController@installer");
 Route::get('/', "UserController@index");
+Route::get('/users', "UserController@index");
 Route::get('/users/{user}', "UserController@show");

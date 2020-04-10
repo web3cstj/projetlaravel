@@ -1,7 +1,7 @@
 <div id="templatemo_menu" class="ddsmoothmenu">
     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a>
+        <li><a href="/">Home</a></li>
+        <li><a href="{{action('UserController@index')}}">Liste des usagers</a>
             <ul>
                 <li><a href="#submenu1">Sub menu 1</a></li>
                 <li><a href="#submenu2">Sub menu 2</a></li>
