@@ -16,5 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/welcome', function () {
     return view('welcome');
 });
-Route::get('/', "UserController@index");
 Route::get('/installer', "AppController@installer");
+Route::get('/', "UserController@index");
+Route::get('/users/{user}', "UserController@show");
