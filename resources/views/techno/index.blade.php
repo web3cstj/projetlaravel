@@ -10,7 +10,7 @@
 Techno Template
 http://www.templatemo.com/preview/templatemo_349_techno
 -->
-<link href="css/templatemo_style.css" rel="stylesheet" type="text/css" />
+<link href="{{asset('css/templatemo_style.css')}}" rel="stylesheet" type="text/css" />
 
 <script language="javascript" type="text/javascript">
 function clearText(field)
@@ -20,10 +20,10 @@ function clearText(field)
 }
 </script>
 
-<link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css" />
+<link rel="stylesheet" type="text/css" href="{{asset('css/ddsmoothmenu.css')}}" />
 
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/ddsmoothmenu.js">
+<script type="text/javascript" src="{{asset('js/jquery.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/ddsmoothmenu.js')}}">
 
 /***********************************************
 * Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
@@ -58,7 +58,7 @@ ddsmoothmenu.init({
 		<div id="content">
             @section('contenu')
             <div class="post fpost">
-            	<img src="images/blog/01.jpg" alt="Image 01" class="image_frame image_fl" />
+            	<img src="{{asset('images/blog/01.jpg')}}" alt="Image 01" class="image_frame image_fl" />
                 <h2><a rel="nofollow" href="http://www.templatemo.com">Free Website Templates</a></h2>
                 <div class="meta">by <strong><a href="#">Edward </a></strong> on <strong>March 24, 2048</strong> in <strong><a href="#">Freebie</a>, <a href="#">Template</a></strong> | <strong><a href="#">124 comments</a></strong></div>
                 <p>Quisque venenatis lacus vitae erat lacinia non rutrum purus suscipit. Suspendisse ligula metus, ullamcorper pretium rutrum ut, laoreet et erat. Aenean at urna sit amet massa pharetra cursus id vestibulum enim. Cras tempor, libero eget auctor consectetur, nulla lacus euismod nulla, ac fermentum sapien a libero.</p>
@@ -67,7 +67,7 @@ ddsmoothmenu.init({
             </div>
 
             <div class="post">
-            	<img src="images/blog/02.jpg" alt="Image 02" class="image_frame image_fl" />
+            	<img src="{{asset('images/blog/02.jpg')}}" alt="Image 02" class="image_frame image_fl" />
                 <h2>Multimedia Website</h2>
                 <div class="meta">by <strong><a href="#">Johny</a></strong> on <strong>March 18, 2048</strong> in <strong><a href="#">Coding</a>, <a href="#">HTML</a></strong> | <strong><a href="#">196 comments</a></strong></div>
                 <p>Nulla odio sapien, mollis commodo dictum vitae, mattis eget felis. Etiam malesuada est nec nisl commodo egestas sit amet non mi. Nam a lectus et nisi congue malesuada. Pellentesque velit lacus, venenatis et vehicula ut, consequat ac arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere.</p>
@@ -76,7 +76,7 @@ ddsmoothmenu.init({
             </div>
 
             <div class="post">
-            	<img src="images/blog/03.jpg" alt="Image 03" class="image_frame image_fl" />
+            	<img src="{{asset('images/blog/03.jpg')}}" alt="Image 03" class="image_frame image_fl" />
                 <h2>3D Animations</h2>
                 <div class="meta">by <strong><a href="#">Eddy</a></strong> on <strong>March 15, 2048</strong> in <strong><a href="#">3D</a>, <a href="#">Interactive</a></strong> | <strong><a href="#">240 comments</a></strong></div>
                 <p> Aenean id sapien vulputate massa tristique pretium. Vestibulum vel metus eget felis auctor aliquam. Ut enim metus, tempus id dignissim vitae, tempor at lectus. Fusce tincidunt vestibulum fringilla. Etiam lobortis nulla id augue placerat blandit. Cras quis quam sapien. Validate <a href="http://validator.w3.org/check?uri=referer" rel="nofollow"><strong>XHTML</strong></a> &amp; <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow"><strong>CSS</strong></a>.</p>
