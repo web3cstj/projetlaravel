@@ -3,7 +3,7 @@
     @foreach($users as $user)
         @component("techno.post");
             @slot('titre')
-                {{$user->prenom}} <em>{{$user->nom}}</em>
+                <a href="{{action('UserController@show', $user)}}">{{$user->prenom}} <em>{{$user->nom}}</em></a>
             @endslot
             @slot('contenu')
                 <div>{{$user->email}}</div>
