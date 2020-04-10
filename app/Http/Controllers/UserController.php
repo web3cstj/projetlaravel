@@ -14,10 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = [];
-        for ($i = 0; $i < 10; $i += 1) {
-           $users[] = User::fake();
-        }
+        $users = User::orderBy('nom')->get();
         return view("users.index", ['users'=>$users]);
     }
 
