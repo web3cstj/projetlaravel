@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use App\User;
+use App\Post;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -11,6 +12,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        for ($i = 0; $i < 10; $i += 1) {
+            $user = User::fake();
+            $user->save();
+        }
         // $this->call(UsersTableSeeder::class);
     }
 }

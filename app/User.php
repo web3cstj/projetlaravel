@@ -42,6 +42,8 @@ class User extends Authenticatable
         $resultat = new self();
         $resultat->prenom = $f->firstName();
         $resultat->nom = $f->lastName();
+        $resultat->name = \Str::slug($resultat->prenom.$resultat->nom, '');
+        $resultat->password = \Str::slug($resultat->prenom.$resultat->nom, '');
         $resultat->email = \Str::slug($resultat->prenom.$resultat->nom, '')
         .'@'.$f->domainName();
         $resultat->tel = $f->phoneNumber();

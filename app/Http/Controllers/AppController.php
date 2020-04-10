@@ -13,7 +13,7 @@ class AppController extends Controller
         $db = \database_path("blog.sqlite");
         file_put_contents($db, '');
         \Artisan::call("migrate");
-
+        \Artisan::call("db:seed");
         return "La base de données a été installée";
     }
 }
