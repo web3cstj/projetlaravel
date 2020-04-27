@@ -9,7 +9,7 @@
                 <span></span>
             </ul>
         </li>
-        <li><a href="portfolio.html">Portfolio</a>
+        <li><a href="{{action('PostController@index')}}">Liste des articles</a>
             <ul>
                 <li><a href="#submenu1">Sub menu 1</a></li>
                 <li><a href="#submenu2">Sub menu 2</a></li>

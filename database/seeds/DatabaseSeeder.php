@@ -12,7 +12,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 0; $i < 10; $i += 1) {
+        for ($i = 0; $i < 15; $i += 1) {
             $user = User::fake();
             $user->save();
             $nb = rand(0, 10);

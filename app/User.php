@@ -54,4 +54,16 @@ class User extends Authenticatable
         $resultat->citation = $f->paragraph();
         return $resultat;
     }
+    public function posts() {
+        return $this->hasMany('App\Post');
+    }
+    public function getNomAdminAttribute() {
+        return $this->nom . ", " . $this->prenom;
+    }
+    public function getNomCompletAttribute() {
+        return $this->prenom . " " . $this->nom;
+    }
+    public function getNbPostsAttribute() {
+        return $this->posts()->count();
+    }
 }

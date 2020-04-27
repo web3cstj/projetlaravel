@@ -1,7 +1,7 @@
 @extends("techno.index")
 @section("contenu")
     @foreach($users as $user)
-        @component("techno.post");
+        @component("techno.post")
             @slot('titre')
                 <a href="{{action('UserController@show', $user)}}">{{$user->prenom}} <em>{{$user->nom}}</em></a>
             @endslot

@@ -19,4 +19,6 @@ Route::get('/welcome', function () {
 Route::get('/installer', "AppController@installer");
 Route::get('/', "UserController@index");
 Route::get('/users', "UserController@index");
-Route::get('/users/{user}', "UserController@show");
+Route::get('/users/{user}', "UserController@show")->where(['user'=>'[0-9]+']);
+Route::get('/posts', "PostController@index");
+Route::get('/posts/{post}', "PostController@show")->where(['post'=>'[0-9]+']);

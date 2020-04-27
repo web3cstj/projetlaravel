@@ -14,4 +14,8 @@ class Post extends Model
         $resultat->contenu = $f->paragraph();
         return $resultat;
     }
+    public function user() {
+        return $this->belongsTo('App\User');
+    }
+
 }
