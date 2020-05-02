@@ -60,7 +60,7 @@ class User extends Authenticatable
         $resultat->ville = $f->city();
         $resultat->province = $f->state();
         $resultat->codepostal = $f->postcode();
-        $resultat->citation = $f->paragraph();
+        $resultat->citation = $f->realText();
         return $resultat;
     }
     public function posts() {

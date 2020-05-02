@@ -110,8 +110,13 @@ class UserController extends Controller
      * @param  User $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy(Request $request, User $user)
     {
-
+        if ($request->has('annuler')){
+            return redirect()->action("UserController@show", $user);
+        }
+        $user->posts()->delete();
+        $user->delete();
+        return redirect()->action("UserController@index");
     }
 }
