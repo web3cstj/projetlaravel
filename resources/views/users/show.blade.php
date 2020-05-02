@@ -21,4 +21,8 @@
             </ul>
         @endslot
     @endcomponent
+    <div>
+        <a href="{{action('UserController@edit', $user)}}">Modifier cet usager</a>
+        | <a href="{{action('UserController@delete', $user)}}">Supprimer cet usager</a>
+    </div>
 @endsection

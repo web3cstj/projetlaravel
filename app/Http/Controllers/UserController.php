@@ -39,6 +39,9 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        if ($request->has('annuler')){
+            return redirect()->action("UserController@index");
+        }
         $donnees = $request->all();
         $user = new User();
         $user->fill($donnees);
@@ -49,7 +52,7 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  User $user
      * @return \Illuminate\Http\Response
      */
     public function show(User $user)
@@ -61,34 +64,54 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  User $user
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        //
+        return view("users.edit", ['user' => $user]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  User $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
-        //
+        if ($request->has('annuler')){
+            return redirect()->action("UserController@show", $user);
+        }
+        $donnees = $request->all();
+        if (!$donnees['password']) {
+            $donnees['password'] = $user['password'];
+        }
+        $user->fill($donnees);
+        $user->save();
+        return redirect()->action("UserController@show", $user);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  User $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete(User $user)
     {
-        //
+        return view("users.delete", ['user' => $user]);
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  User $user
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(User $user)
+    {
+
     }
 }

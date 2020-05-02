@@ -24,9 +24,9 @@ Route::group(['prefix'=>'users', 'where'=>['user'=>'[0-9]+']], function () {
     Route::post('/create', "UserController@store");
     Route::get('/{user}', "UserController@show");
     Route::get('/{user}/edit', "UserController@edit");
-    Route::post('/{user}edit', "UserController@update");
+    Route::post('/{user}/edit', "UserController@update");
     Route::get('/{user}/delete', "UserController@delete");
-    Route::post('/{user}delete', "UserController@destroy");
+    Route::post('/{user}/delete', "UserController@destroy");
 });
 Route::group(['prefix'=>'posts', 'where'=>['post'=>'[0-9]+']], function () {
     Route::get('/', "PostController@index");
