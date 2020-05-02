@@ -39,7 +39,11 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $donnees = $request->all();
+        $user = new User();
+        $user->fill($donnees);
+        $user->save();
+        return redirect()->action("UserController@show", $user);
     }
 
     /**
