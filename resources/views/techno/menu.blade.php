@@ -3,7 +3,7 @@
         <li><a href="/">Home</a></li>
         <li><a href="{{action('UserController@index')}}">Liste des usagers</a>
             <ul>
-                <li><a href="#submenu1">Sub menu 1</a></li>
+                <li><a href="{{action('UserController@create')}}">Ajouter un usager</a></li>
                 <li><a href="#submenu2">Sub menu 2</a></li>
                 <li><a href="#submenu3">Sub menu 3</a></li>
                 <span></span>
@@ -11,7 +11,7 @@
         </li>
         <li><a href="{{action('PostController@index')}}">Liste des articles</a>
             <ul>
-                <li><a href="#submenu1">Sub menu 1</a></li>
+                <li><a href="{{action('PostController@create')}}">Ajouter un article</a></li>
                 <li><a href="#submenu2">Sub menu 2</a></li>
                 <li><a href="#submenu3">Sub menu 3</a></li>
                 <li><a href="#submenu4">Sub menu 4</a></li>
