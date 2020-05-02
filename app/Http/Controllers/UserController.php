@@ -25,7 +25,10 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        // $user = new User();
+        // $user->province = "Québec";
+        $user = User::fake();
+        return view('users.create', ['user'=>$user]);
     }
 
     /**
