@@ -46,6 +46,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    static public $regles = [
+        'prenom' => 'required',
+        'email' => 'email',
+        'codepostal' => 'required|regex:/^[a-z][0-9][a-z][.-]?[0-9][a-z][0-9]$/i',
+    ];
+
     static public function fake() {
         $f = \Faker\Factory::create("fr_CA");
         $resultat = new self();

@@ -42,6 +42,8 @@ class UserController extends Controller
         if ($request->has('annuler')){
             return redirect()->action("UserController@index");
         }
+        $request->validate(User::$regles);
+        dd(User::$regles);
         $donnees = $request->all();
         $user = new User();
         $user->fill($donnees);
